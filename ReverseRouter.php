@@ -7,6 +7,7 @@ namespace Ling\Light_ReverseRouter;
 use Ling\Light\Core\Light;
 use Ling\Light\Exception\LightException;
 use Ling\Light\Http\HttpRequestInterface;
+use Ling\Light\Http\HttpResponseInterface;
 use Ling\Light\ReverseRouter\LightReverseRouterInterface;
 use Ling\Light_Initializer\Initializer\LightInitializerInterface;
 
@@ -36,7 +37,7 @@ class ReverseRouter implements LightInitializerInterface, LightReverseRouterInte
     /**
      * @implementation
      */
-    public function initialize(Light $light, HttpRequestInterface $httpRequest)
+    public function initialize(Light $light, HttpRequestInterface $httpRequest, HttpResponseInterface &$response = null)
     {
         $this->routes = $light->getRoutes();
     }

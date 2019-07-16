@@ -4,7 +4,7 @@
 
 The ReverseRouter class
 ================
-2019-04-10 --> 2019-04-10
+2019-04-10 --> 2019-07-16
 
 
 
@@ -29,7 +29,7 @@ class <span class="pl-k">ReverseRouter</span> implements [LightInitializerInterf
 
 - Methods
     - public [__construct](https://github.com/lingtalfi/Light_ReverseRouter/blob/master/doc/api/Ling/Light_ReverseRouter/ReverseRouter/__construct.md)() : void
-    - public [initialize](https://github.com/lingtalfi/Light_ReverseRouter/blob/master/doc/api/Ling/Light_ReverseRouter/ReverseRouter/initialize.md)(Ling\Light\Core\Light $light, Ling\Light\Http\HttpRequestInterface $httpRequest) : mixed
+    - public [initialize](https://github.com/lingtalfi/Light_ReverseRouter/blob/master/doc/api/Ling/Light_ReverseRouter/ReverseRouter/initialize.md)(Ling\Light\Core\Light $light, Ling\Light\Http\HttpRequestInterface $httpRequest, Ling\Light\Http\HttpResponseInterface &$response = null) : mixed
     - public [getUrl](https://github.com/lingtalfi/Light_ReverseRouter/blob/master/doc/api/Ling/Light_ReverseRouter/ReverseRouter/getUrl.md)(string $routeName, array $urlParameters = []) : string
 
 }
