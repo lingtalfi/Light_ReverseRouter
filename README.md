@@ -72,6 +72,10 @@ The **initializer** service is provided by the [Light_Initializer planet](https:
 History Log
 =============
 
+- 1.2.0 -- 2019-07-17
+
+    - update ReverseRouter class to adapt the new LightReverseRouterInterface
+    
 - 1.1.0 -- 2019-07-17
 
     - update ReverseRouter class to adapt the new  LightInitializerInterface

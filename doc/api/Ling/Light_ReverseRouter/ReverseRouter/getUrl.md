@@ -16,12 +16,13 @@ Description
 ================
 
 
-public [ReverseRouter::getUrl](https://github.com/lingtalfi/Light_ReverseRouter/blob/master/doc/api/Ling/Light_ReverseRouter/ReverseRouter/getUrl.md)(string $routeName, array $urlParameters = []) : string
+public [ReverseRouter::getUrl](https://github.com/lingtalfi/Light_ReverseRouter/blob/master/doc/api/Ling/Light_ReverseRouter/ReverseRouter/getUrl.md)(string $routeName, array $urlParameters = [], bool $useAbsolute = false) : string
 
 
 
 
 Returns the url corresponding to the given route name and url parameters.
+If the useAbsolute flag is set to true, an absolute url will be returned.
 
 
 
@@ -35,6 +36,10 @@ Parameters
     
 
 - urlParameters
+
+    
+
+- useAbsolute
 
     
 

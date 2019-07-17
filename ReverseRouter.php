@@ -46,11 +46,26 @@ class ReverseRouter implements LightInitializerInterface, LightReverseRouterInte
     /**
      * @implementation
      */
-    public function getUrl(string $routeName, array $urlParameters = []): string
+    public function getUrl(string $routeName, array $urlParameters = [], bool $useAbsolute = false): string
     {
         if (array_key_exists($routeName, $this->routes)) {
             $route = $this->routes[$routeName];
-            return $route['pattern'];
+
+            if (false === $useAbsolute) {
+                return $route['pattern'];
+            }
+
+
+            //--------------------------------------------
+            // absolute version
+            //--------------------------------------------
+            $isSecure = $route['is_secure_protocol'];
+            if (true === $isSecure) {
+                $protocol = 'https';
+            } else {
+                $protocol = 'http';
+            }
+            return $protocol . "://" . $route['host'] . $route['pattern'];
         }
         throw new LightException("ReverseRouter: Route not found: $routeName.");
     }
