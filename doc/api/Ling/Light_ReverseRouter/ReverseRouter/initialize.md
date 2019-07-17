@@ -16,7 +16,7 @@ Description
 ================
 
 
-public [ReverseRouter::initialize](https://github.com/lingtalfi/Light_ReverseRouter/blob/master/doc/api/Ling/Light_ReverseRouter/ReverseRouter/initialize.md)(Ling\Light\Core\Light $light, Ling\Light\Http\HttpRequestInterface $httpRequest, Ling\Light\Http\HttpResponseInterface &$response = null) : mixed
+public [ReverseRouter::initialize](https://github.com/lingtalfi/Light_ReverseRouter/blob/master/doc/api/Ling/Light_ReverseRouter/ReverseRouter/initialize.md)(Ling\Light\Core\Light $light, Ling\Light\Http\HttpRequestInterface $httpRequest) : mixed
 
 
 
@@ -35,10 +35,6 @@ Parameters
     
 
 - httpRequest
-
-    
-
-- response
 
     
 
