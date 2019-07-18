@@ -16,7 +16,7 @@ Description
 ================
 
 
-public [ReverseRouter::getUrl](https://github.com/lingtalfi/Light_ReverseRouter/blob/master/doc/api/Ling/Light_ReverseRouter/ReverseRouter/getUrl.md)(string $routeName, array $urlParameters = [], bool $useAbsolute = false) : string
+public [ReverseRouter::getUrl](https://github.com/lingtalfi/Light_ReverseRouter/blob/master/doc/api/Ling/Light_ReverseRouter/ReverseRouter/getUrl.md)(string $routeName, array $urlParameters = [], bool $useAbsolute = null) : string
 
 
 
@@ -63,7 +63,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [ReverseRouter::getUrl](https://github.com/lingtalfi/Light_ReverseRouter/blob/master/ReverseRouter.php#L48-L74)
+See the source code for method [ReverseRouter::getUrl](https://github.com/lingtalfi/Light_ReverseRouter/blob/master/ReverseRouter.php#L49-L79)
 
 
 See Also
