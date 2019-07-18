@@ -64,7 +64,11 @@ class ReverseRouter implements LightInitializerInterface, LightReverseRouterInte
             } else {
                 $protocol = 'http';
             }
-            return $protocol . "://" . $route['host'] . $route['pattern'];
+            $host = $route['host'];
+            if (null === $host) {
+                $host = $_SERVER['HTTP_HOST'];
+            }
+            return $protocol . "://" . $host . $route['pattern'];
         }
         throw new LightException("ReverseRouter: Route not found: $routeName.");
     }

@@ -72,6 +72,10 @@ The **initializer** service is provided by the [Light_Initializer planet](https:
 History Log
 =============
     
+- 1.3.2 -- 2019-07-18
+
+    - fix ReverseRouter.getUrl returning wrong implicit host for absolute url
+    
 - 1.3.1 -- 2019-07-18
 
     - update docTools documentation, add links to source code for classes and methods
