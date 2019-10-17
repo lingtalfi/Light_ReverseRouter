@@ -77,6 +77,10 @@ History Log
 =============
 
 
+- 1.7.0 -- 2019-09-17
+
+    - update ReverseRouter to accommodate new LightReverseRouterInterface interface methods 
+    
 - 1.6.0 -- 2019-09-10
 
     - update service instantiation to accommodate the new initializer interface
