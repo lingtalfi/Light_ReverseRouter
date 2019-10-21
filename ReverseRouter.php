@@ -5,6 +5,7 @@ namespace Ling\Light_ReverseRouter;
 
 
 use Ling\Bat\HttpTool;
+use Ling\Bat\UriTool;
 use Ling\Light\Core\Light;
 use Ling\Light\Exception\LightException;
 use Ling\Light\Http\HttpRequestInterface;
@@ -64,7 +65,7 @@ class ReverseRouter implements LightInitializerInterface, LightReverseRouterInte
             if (false === $useAbsolute) {
                 $url = $route['pattern'];
                 if ($getVars) {
-                    $url .= '?' . http_build_query($getVars);
+                    $url .= '?' . UriTool::httpBuildQuery($getVars);
                 }
                 return $url;
             }
@@ -89,7 +90,7 @@ class ReverseRouter implements LightInitializerInterface, LightReverseRouterInte
             }
             $url = $protocol . "://" . $host . $route['pattern'];
             if ($getVars) {
-                $url .= '?' . http_build_query($getVars);
+                $url .= '?' . UriTool::httpBuildQuery($getVars);
             }
             return $url;
         }

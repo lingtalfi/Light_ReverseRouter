@@ -68,7 +68,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [ReverseRouter::getUrl](https://github.com/lingtalfi/Light_ReverseRouter/blob/master/ReverseRouter.php#L49-L97)
+See the source code for method [ReverseRouter::getUrl](https://github.com/lingtalfi/Light_ReverseRouter/blob/master/ReverseRouter.php#L50-L98)
 
 
 See Also
