@@ -47,7 +47,7 @@ class ReverseRouter implements LightInitializerInterface, LightReverseRouterInte
     /**
      * @implementation
      */
-    public function getUrl(string $routeName, array $urlParameters = [], bool $useAbsolute = false): string
+    public function getUrl(string $routeName, array $urlParameters = [], $useAbsolute = false): string
     {
 
         /**
