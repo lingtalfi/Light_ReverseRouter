@@ -1,6 +1,6 @@
 Ling/Light_ReverseRouter
 ================
-2019-04-10 --> 2019-10-23
+2019-04-10 --> 2019-11-11
 
 
 
@@ -12,6 +12,7 @@ Table of contents
     - [ReverseRouter::__construct](https://github.com/lingtalfi/Light_ReverseRouter/blob/master/doc/api/Ling/Light_ReverseRouter/ReverseRouter/__construct.md) &ndash; Builds the ReverseRouter instance.
     - [ReverseRouter::initialize](https://github.com/lingtalfi/Light_ReverseRouter/blob/master/doc/api/Ling/Light_ReverseRouter/ReverseRouter/initialize.md) &ndash; Initializes a service with the given Light instance and HttpRequestInterface instance.
     - [ReverseRouter::getUrl](https://github.com/lingtalfi/Light_ReverseRouter/blob/master/doc/api/Ling/Light_ReverseRouter/ReverseRouter/getUrl.md) &ndash; Returns the url corresponding to the given route name and url parameters.
+    - [ReverseRouter::onCoreExceptionCaught](https://github.com/lingtalfi/Light_ReverseRouter/blob/master/doc/api/Ling/Light_ReverseRouter/ReverseRouter/onCoreExceptionCaught.md) &ndash; This method is the callable triggered on the [Light.on_exception_caught event](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/events.md).
 
 
 Dependencies

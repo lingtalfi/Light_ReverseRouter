@@ -49,11 +49,21 @@ reverse_router:
 # --------------------------------------
 # hooks
 # --------------------------------------
+$events.methods_collection:
+    -
+        method: registerListener
+        args:
+            event: Light.on_exception_caught
+            listener:
+                instance: @service(reverse_router)
+                callable_method: onCoreExceptionCaught
+
 $initializer.methods_collection:
     -
         method: registerInitializer
         args:
             initializer: @service(reverse_router)
+
 
 
 
@@ -76,6 +86,10 @@ The **initializer** service is provided by the [Light_Initializer planet](https:
 History Log
 =============
 
+- 1.8.0 -- 2019-11-11
+
+    - add redirecting handler for Light.on_exception_caught event 
+    
 - 1.7.2 -- 2019-09-17
 
     - update ReverseRouter to accommodate new LightReverseRouterInterface interface method signature 

@@ -7,7 +7,10 @@ namespace Ling\Light_ReverseRouter;
 use Ling\Bat\HttpTool;
 use Ling\Bat\UriTool;
 use Ling\Light\Core\Light;
+use Ling\Light\Events\LightEvent;
 use Ling\Light\Exception\LightException;
+use Ling\Light\Exception\LightRedirectException;
+use Ling\Light\Http\HttpRedirectResponse;
 use Ling\Light\Http\HttpRequestInterface;
 use Ling\Light\ReverseRouter\LightReverseRouterInterface;
 use Ling\Light_Initializer\Initializer\LightInitializerInterface;
@@ -95,6 +98,26 @@ class ReverseRouter implements LightInitializerInterface, LightReverseRouterInte
             return $url;
         }
         throw new LightException("ReverseRouter: Route not found: $routeName.");
+    }
+
+
+    /**
+     * This method is the callable triggered on the @page(Light.on_exception_caught event).
+     * If the caught exception is an instance of LightRedirectException, this method sets the httpResponse
+     *  variable (in the given LightEvent instance), to effectively redirect the user.
+     *
+     * @param LightEvent $event
+     * @param string $eventName
+     * @throws LightException
+     */
+    public function onCoreExceptionCaught(LightEvent $event, string $eventName)
+    {
+        $exception = $event->getVar('exception', null, true);
+        if ($exception instanceof LightRedirectException) {
+            $urlParams = $_GET;
+            $url = $this->getUrl($exception->getRedirectRoute(), $urlParams, true);
+            $event->getVar('httpResponse', HttpRedirectResponse::create($url));
+        }
     }
 
 
