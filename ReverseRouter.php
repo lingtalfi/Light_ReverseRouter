@@ -108,15 +108,17 @@ class ReverseRouter implements LightInitializerInterface, LightReverseRouterInte
      *
      * @param LightEvent $event
      * @param string $eventName
+     * @param bool $stopPropagation
      * @throws LightException
      */
-    public function onCoreExceptionCaught(LightEvent $event, string $eventName)
+    public function onCoreExceptionCaught(LightEvent $event, string $eventName, bool &$stopPropagation = false)
     {
         $exception = $event->getVar('exception', null, true);
         if ($exception instanceof LightRedirectException) {
             $urlParams = $_GET;
             $url = $this->getUrl($exception->getRedirectRoute(), $urlParams, true);
-            $event->getVar('httpResponse', HttpRedirectResponse::create($url));
+            $event->setVar('httpResponse', HttpRedirectResponse::create($url));
+            $stopPropagation = true;
         }
     }
 

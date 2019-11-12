@@ -86,6 +86,10 @@ The **initializer** service is provided by the [Light_Initializer planet](https:
 History Log
 =============
 
+- 1.9.0 -- 2019-11-12
+
+    - fix functional typo and rewrite service configuration with new listener priority 
+    
 - 1.8.0 -- 2019-11-11
 
     - add redirecting handler for Light.on_exception_caught event 

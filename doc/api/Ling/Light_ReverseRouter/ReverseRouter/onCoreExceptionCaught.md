@@ -16,7 +16,7 @@ Description
 ================
 
 
-public [ReverseRouter::onCoreExceptionCaught](https://github.com/lingtalfi/Light_ReverseRouter/blob/master/doc/api/Ling/Light_ReverseRouter/ReverseRouter/onCoreExceptionCaught.md)(Ling\Light\Events\LightEvent $event, string $eventName) : void
+public [ReverseRouter::onCoreExceptionCaught](https://github.com/lingtalfi/Light_ReverseRouter/blob/master/doc/api/Ling/Light_ReverseRouter/ReverseRouter/onCoreExceptionCaught.md)(Ling\Light\Events\LightEvent $event, string $eventName, ?bool &$stopPropagation = false) : void
 
 
 
@@ -40,6 +40,10 @@ Parameters
 
     
 
+- stopPropagation
+
+    
+
 
 Return values
 ================
@@ -60,7 +64,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [ReverseRouter::onCoreExceptionCaught](https://github.com/lingtalfi/Light_ReverseRouter/blob/master/ReverseRouter.php#L113-L121)
+See the source code for method [ReverseRouter::onCoreExceptionCaught](https://github.com/lingtalfi/Light_ReverseRouter/blob/master/ReverseRouter.php#L114-L123)
 
 
 See Also
