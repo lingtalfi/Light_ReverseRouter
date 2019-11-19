@@ -42,27 +42,19 @@ Here is the content of the service configuration file:
 
 ```yaml
 reverse_router:
-    instance: Ling\Light_ReverseRouter\ReverseRouter
+    instance: Ling\Light_ReverseRouter\Service\LightReverseRouterService
 
 
 
 # --------------------------------------
 # hooks
 # --------------------------------------
-$events.methods_collection:
-    -
-        method: registerListener
-        args:
-            event: Light.on_exception_caught
-            listener:
-                instance: @service(reverse_router)
-                callable_method: onCoreExceptionCaught
-
 $initializer.methods_collection:
     -
         method: registerInitializer
         args:
             initializer: @service(reverse_router)
+
 
 
 
@@ -86,6 +78,10 @@ The **initializer** service is provided by the [Light_Initializer planet](https:
 History Log
 =============
 
+- 1.10.0 -- 2019-11-19
+
+    - ReverseRouter becomes LightReverseRouterService 
+    
 - 1.9.0 -- 2019-11-12
 
     - fix functional typo and rewrite service configuration with new listener priority 
