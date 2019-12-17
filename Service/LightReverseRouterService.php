@@ -6,9 +6,7 @@ namespace Ling\Light_ReverseRouter\Service;
 
 use Ling\Bat\HttpTool;
 use Ling\Bat\UriTool;
-use Ling\Light\Core\Light;
-use Ling\Light\Http\HttpRequestInterface;
-use Ling\Light_Initializer\Initializer\LightInitializerInterface;
+use Ling\Light\Events\LightEvent;
 use Ling\Light_ReverseRouter\Exception\LightReverseRouterException;
 
 /**
@@ -25,7 +23,7 @@ use Ling\Light_ReverseRouter\Exception\LightReverseRouterException;
  *
  * See more information about the route in @page(the route page).
  */
-class LightReverseRouterService implements LightInitializerInterface
+class LightReverseRouterService
 {
 
 
@@ -46,11 +44,14 @@ class LightReverseRouterService implements LightInitializerInterface
 
 
     /**
-     * @implementation
+     * Listener for the @page(Light.initialize_1 event).
+     * It stores the routes attached to the light instance.
+     *
+     * @param LightEvent $event
      */
-    public function initialize(Light $light, HttpRequestInterface $httpRequest)
+    public function initialize(LightEvent $event)
     {
-        $this->routes = $light->getRoutes();
+        $this->routes = $event->getLight()->getRoutes();
     }
 
 

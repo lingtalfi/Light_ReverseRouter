@@ -7,7 +7,7 @@ LightReverseRouterService::initialize
 
 
 
-LightReverseRouterService::initialize — Initializes a service with the given Light instance and HttpRequestInterface instance.
+LightReverseRouterService::initialize — Listener for the [Light.initialize_1 event](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/events.md).
 
 
 
@@ -16,12 +16,13 @@ Description
 ================
 
 
-public [LightReverseRouterService::initialize](https://github.com/lingtalfi/Light_ReverseRouter/blob/master/doc/api/Ling/Light_ReverseRouter/Service/LightReverseRouterService/initialize.md)(Ling\Light\Core\Light $light, Ling\Light\Http\HttpRequestInterface $httpRequest) : mixed
+public [LightReverseRouterService::initialize](https://github.com/lingtalfi/Light_ReverseRouter/blob/master/doc/api/Ling/Light_ReverseRouter/Service/LightReverseRouterService/initialize.md)(Ling\Light\Events\LightEvent $event) : void
 
 
 
 
-Initializes a service with the given Light instance and HttpRequestInterface instance.
+Listener for the [Light.initialize_1 event](https://github.com/lingtalfi/Light/blob/master/personal/mydoc/pages/events.md).
+It stores the routes attached to the light instance.
 
 
 
@@ -30,11 +31,7 @@ Parameters
 ================
 
 
-- light
-
-    
-
-- httpRequest
+- event
 
     
 
@@ -42,7 +39,7 @@ Parameters
 Return values
 ================
 
-Returns mixed.
+Returns void.
 
 
 
@@ -53,7 +50,7 @@ Returns mixed.
 
 Source Code
 ===========
-See the source code for method [LightReverseRouterService::initialize](https://github.com/lingtalfi/Light_ReverseRouter/blob/master/Service/LightReverseRouterService.php#L51-L54)
+See the source code for method [LightReverseRouterService::initialize](https://github.com/lingtalfi/Light_ReverseRouter/blob/master/Service/LightReverseRouterService.php#L52-L55)
 
 
 See Also

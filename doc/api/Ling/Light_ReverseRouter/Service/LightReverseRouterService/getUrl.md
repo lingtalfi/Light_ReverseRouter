@@ -68,7 +68,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [LightReverseRouterService::getUrl](https://github.com/lingtalfi/Light_ReverseRouter/blob/master/Service/LightReverseRouterService.php#L74-L122)
+See the source code for method [LightReverseRouterService::getUrl](https://github.com/lingtalfi/Light_ReverseRouter/blob/master/Service/LightReverseRouterService.php#L75-L123)
 
 
 See Also

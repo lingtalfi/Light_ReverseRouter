@@ -1,6 +1,6 @@
 Light_ReverseRouter
 ===========
-2019-04-10
+2019-04-10 -> 2019-12-17
 
 
 
@@ -49,12 +49,14 @@ reverse_router:
 # --------------------------------------
 # hooks
 # --------------------------------------
-$initializer.methods_collection:
+$events.methods_collection:
     -
-        method: registerInitializer
+        method: registerListener
         args:
-            initializer: @service(reverse_router)
-
+            events: Light.Light.initialize_1
+            listener:
+                instance: @service(reverse_router)
+                callable_method: initialize
 
 
 
@@ -77,6 +79,10 @@ The **initializer** service is provided by the [Light_Initializer planet](https:
 
 History Log
 =============
+
+- 1.11.0 -- 2019-12-17
+
+    - update plugin to accommodate Light 0.50 new initialization system
 
 - 1.10.0 -- 2019-11-19
 
