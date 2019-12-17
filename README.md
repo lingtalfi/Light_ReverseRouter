@@ -53,7 +53,7 @@ $events.methods_collection:
     -
         method: registerListener
         args:
-            events: Light.Light.initialize_1
+            events: Light.initialize_1
             listener:
                 instance: @service(reverse_router)
                 callable_method: initialize
@@ -80,6 +80,10 @@ The **initializer** service is provided by the [Light_Initializer planet](https:
 History Log
 =============
 
+- 1.11.1 -- 2019-12-17
+
+    - fix functional typo in service configuration
+    
 - 1.11.0 -- 2019-12-17
 
     - update plugin to accommodate Light 0.50 new initialization system
