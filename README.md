@@ -80,6 +80,10 @@ The **initializer** service is provided by the [Light_Initializer planet](https:
 History Log
 =============
 
+- 1.11.2 -- 2020-12-04
+
+    - Add lpi-deps.byml file
+
 - 1.11.1 -- 2019-12-17
 
     - fix functional typo in service configuration
