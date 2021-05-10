@@ -81,3 +81,7 @@
 1.11.5: 
     - Ling:Bat:1.308+
     - Ling:Light:0.70.0+
+
+1.11.6: 
+    - Ling:Bat:1.315+
+    - Ling:Light:0.70.4+
